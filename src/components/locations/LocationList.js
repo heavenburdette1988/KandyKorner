@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react"
 // import { useNavigate } from "react-router"
-import { LocationCard } from "./Location"
+import { LocationCard } from "./LocationCard"
 
 
 import "./Location.css"
@@ -33,7 +33,8 @@ export const LocationList = () => {
         locations.map(location => {
 
 
-          return <LocationCard key={location.id} location={location} />
+          return <LocationCard key={location.id} 
+          location={location} />
         })
       }
     </div>

@@ -14,16 +14,16 @@ export const LocationProvider = (props) => {
         
     }
 
-    const addLocation = locationObj => {
-        return fetch("http://localhost:8088/locations", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(locationObj)
-        })
-        .then(getLocations)
-    }
+    // const addLocation = locationObj => {
+    //     return fetch("http://localhost:8088/locations", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(locationObj)
+    //     })
+    //     .then(getLocations)
+    // }
 
     /*
         You return a context provider which has the
@@ -33,7 +33,7 @@ export const LocationProvider = (props) => {
     */
     return (
         <LocationContext.Provider value={{
-            locations, getLocations, addLocation
+            locations, getLocations
         }}>
             {props.children}
         </LocationContext.Provider>

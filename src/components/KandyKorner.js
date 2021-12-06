@@ -3,10 +3,12 @@ import React from "react";
 // import { LocationProvider } from "./locations/LocationsProvider";
 // import { Route, Routes } from "react-router-dom"
 import { ApplicationView } from "../ApplicationView";
+import { NavBar } from "./nav/NavBar";
+
+
 export const KandyKorner = () => (
     <>
-<ApplicationView/>
-
-
+    <NavBar/>
+<ApplicationView />
 </>
 )
