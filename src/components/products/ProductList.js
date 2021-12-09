@@ -13,12 +13,12 @@ import { ProductContext } from "./ProductProvider"
 export const ProductList = () => {
   // This state changes when `getAnimals()` is invoked below
   const { products, getProducts } = useContext(ProductContext)
-const {productTypes, getProductTypes} = useContext(ProductTypeContext)
+// const {productTypes, getProductTypes} = useContext(ProductTypeContext)
   //useEffect - reach out to the world for something
   useEffect(() => {
 
     getProducts()
-    .then(getProductTypes)
+
 
   }, [])
 //   const navigate = useNavigate()
@@ -33,16 +33,16 @@ const {productTypes, getProductTypes} = useContext(ProductTypeContext)
     </button> */}
     <div className="products">
  
-      {
-        products.map(product => {
+      { products.map(product => {
         
-            const kandy = productTypes.find(t => t.id === product.productTypesId)
+          
          
             // const productType = productType.find(t => t.id === product.productTypeId)
-          return  <ProductCard key={product.id} 
-        
+          return  <ProductCard 
+          key={product.id}         
           product={product}
-          productType={kandy} />
+          
+           />
          
         })
       }
@@ -52,3 +52,4 @@ const {productTypes, getProductTypes} = useContext(ProductTypeContext)
   )
 }
 
+// productType={kandy}
